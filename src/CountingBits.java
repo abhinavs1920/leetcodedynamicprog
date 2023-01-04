@@ -1,16 +1,18 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class CountingBits {
     public static void main(String[] args) {
-        countBits(5);
+        countBits(2);
 
     }
     public static int[] countBits(int n) {
         int count = 0 ;
         int arr[] = new int[n+1];
-        ArrayList<Integer> binaryarray = new ArrayList<>();
+
+
         for ( int i = 0 ; i < n+1 ; i++)
-        {
+        {ArrayList<Integer> binaryarray = new ArrayList<>();
             count = 0 ;
             int num = i;
             for(num=i;num>0;){
@@ -25,7 +27,7 @@ public class CountingBits {
             }
           arr[i] = count ;
         }
-        System.out.printf(String.valueOf(arr));
-        return new int[0];
+        System.out.println(Arrays.toString(arr));
+        return arr;
     }
 }
